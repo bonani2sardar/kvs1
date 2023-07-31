@@ -1,5 +1,6 @@
 import streamlit as st
 from transformers import pipeline
+
 def main():
     st.title("Document Summarization App")
     st.subheader("Upload a Document")

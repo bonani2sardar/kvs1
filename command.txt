@@ -1,0 +1,2 @@
+streamlit run summarizer_app.py
+streamlit run sum.py

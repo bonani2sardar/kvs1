@@ -1,5 +1,9 @@
 import streamlit as st
-from transformers import pipeline
+from transformers import pipeline,BartTokenizer,BartForConditionalGeneration
+
+tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
+model_new=BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")     
+summarizer=pipeline("summarization", model=model_new, tokenizer=tokenizer)
 
 def main():
     st.title("Document Summarization App")
